@@ -1,0 +1,9 @@
+node-server/node_modules
+node-server/package-lock.json
+react-app/build
+react-app/node_modules
+react-app/package-lock.json
+*.test.js
+reportWebVitals.js
+setupTests.js
+to-do

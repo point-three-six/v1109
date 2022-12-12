@@ -1,0 +1,29 @@
+.sidebar {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    float:left;
+    width:30%;
+    min-height: 100vh;
+    min-width:175px;
+    max-width:300px;
+    background-color: rgb(138, 13, 13);
+}
+
+.sidebar .title {
+    font-weight:bold;
+    font-size:1.5em;
+    color:white;
+    text-align:center;
+    margin:10px;
+}
+
+.sidebar .logo {
+    text-align:center;
+    margin:10px;
+}
+
+.sidebar .logo img {
+    max-width:250px;
+    max-height:175px;
+}

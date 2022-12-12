@@ -1,0 +1,29 @@
+.MuiDataGrid-root {
+    border-radius: 0 !important;
+  }
+  
+  .MuiDataGrid-cell:focus-within,
+  .MuiDataGrid-columnHeader:focus-within,
+  .MuiDataGrid-root .MuiDataGrid-columnHeader:focus,
+  .MuiDataGrid-root .MuiDataGrid-cell:focus,
+  .MuiSvgIcon-root:focus {
+    outline: none !important;
+  }
+  
+  .no-escort {
+    background-color:rgb(249, 190, 190);
+    
+  }
+
+  .no-escort .MuiDataGrid-cell {
+    border-bottom:1px solid rgb(249, 190, 190) !important;;
+  }
+
+  .no-time-out {
+    background-color:#fff7ba;
+    
+  }
+  
+  .no-time-out .MuiDataGrid-cell {
+    border-bottom:1px solid #fff7ba !important;;
+  }
