@@ -2,12 +2,15 @@ import '../style/log.css';
 import { useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import ButtonEscort from './ButtonEscort';
+import Alert from './Alert';
 
   export default function Log(props) {
     // subscribe to client to get data from server
     props.Client.subscribe('visitors', 'log.js', loadData);
 
     let [rows, setRows] = useState(() => []);
+    let [alertScanOpen, setAlertScanOpen] = useState(false);
+
     const columns =  [
       { field: 'id', headerName: 'ID', width: 70, hide : true },
       { field: 'firstName', headerName: 'First name', width: 130 },
@@ -43,8 +46,17 @@ import ButtonEscort from './ButtonEscort';
       setRows((prevRows) => [].concat(prevRows, rows))
     }
 
+    function closeAlertScan(){
+      setAlertScanOpen(false);
+    }
+
       return (
         <div style={{ height: '100vh', width: '100%' }}>
+          <Alert 
+            open={alertScanOpen} onClose={closeAlertScan}
+            title="Please Scan ID"
+            body="Please scan your ID."
+          />
           <DataGrid
             initialState={{
               sorting: {
