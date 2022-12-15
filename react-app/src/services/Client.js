@@ -1,7 +1,7 @@
 class Client {
-    constructor(){
+    constructor(address){
         this.subscribers = {};
-        this.socket = new WebSocket('ws://localhost:9000');
+        this.socket = new WebSocket(address);
 
         this.socket.addEventListener('message', (event) => {
             let msg = JSON.parse(event.data);
